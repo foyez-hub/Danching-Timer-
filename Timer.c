@@ -5,7 +5,7 @@
 #include<windows.h>
 int main()
 {
-    Sleep(4000);
+   
        display();
 
        funtionality();
