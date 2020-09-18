@@ -5,35 +5,134 @@
 #include<windows.h>
 int main()
 {
+    Sleep(4000);
+       display();
+
+       funtionality();
+
+}
+void funtionality()
+{
+
+    while(1)
+   {
+        Home();
+
+    Sleep(500);
+      int a=0;
+        if(kbhit())
+      {
+          switch (getch())
+          {
+             case 'x': start();
+              break;
+              case 'd': Home();
+              break;
+               case 'e': {
+                           system("cls");
+                           a=1;
+                         }
+              break;
+
+          }
+          if(a==1)
+           {
+               break;
+               a=0;
+           }
+
+
+   }
+   }
+}
+void Home()
+{
+      system("cls");
+       printf("---------------HOME----------------\n");
+      printf("  Set Timer----------------------(X)\n");
+
+      printf("   Exit-----------------------(E)\n");
+
+}
+void display()
+{
+
+    char s[200]="Danching Timer";
+    char s1[200]="Created by Foyez";
+    int i;
+     printf("-----------------------------\n");
+      Sleep(100);
+     printf("| -------------------------  |\n");
+      Sleep(100);
+     printf("| |                        | |\n");
+      Sleep(100);
+     printf("| |                        | |\n");
+      Sleep(100);
+     printf("     ");
+        for ( i = 0; i <strlen(s); i++)
+          {
+          printf("%c",s[i]);
+          Sleep(300);
+          }
+       printf("\n");
+        printf("     ");
+        for ( i = 0; i <strlen(s1); i++)
+          {
+          printf("%c",s1[i]);
+          Sleep(300);
+          }
+           printf("\n");
+     Sleep(100);
+     printf("| |                        | |\n");
+      Sleep(100);
+     printf("| |                        | |\n");
+      Sleep(100);
+     printf("| -------------------------- |\n");
+      Sleep(100);
+     printf("------------------------------\n");
+      Sleep(2000);
+      system("cls");
+
+
+
+
+
+}
+void start()
+{
+    system("cls");
         int hour,min,sec;
+        Sleep(500);
         printf("Set hour\n");
         scanf("%d",&hour);
+         Sleep(500);
         printf("Set minute\n");
         scanf("%d",&min);
+         Sleep(500);
         printf("Set second\n");
         scanf("%d",&sec);
         system("cls");
         int h=0,m=0,s=0;
         while(1)
         {
-             printf("---------------TIMER--------------\n");
-             printf("         %.2d:%.2d:%.2d\n",h,m,s);
-             printf("-----------------------------------\n");
+             printf("\t---------------TIMER--------------\n");
+             printf("\t             %.2d:%.2d:%.2d\n",h,m,s);
+             printf("\t-----------------------------------\n");
              if(s%2==0)
              {
-                  printf("%d\n",ran_dom());
+
                  display1(ran_dom());
              }
              else
              {
-                 printf("%d\n",ran_dom());
+
                  display2(ran_dom());
              }
 
             Sleep(1000);
              if(h==hour&&m==min&&s==sec)
                {
-        // printf("----------------------\n");
+
                      system("cls");
                      display3();
                      break;
@@ -64,7 +163,7 @@ void display1(int N)
     int count;
 
     count = N * 2 - 1;
-
+      printf("\n");
     for(i=1; i<=count; i++)
     {
         for(j=1; j<=count; j++)
@@ -89,7 +188,7 @@ void display2(int N)
 
 
 
-
+        printf("\n");
     for(i=1; i<=(N * 2 - 1); i++)
     {
 
@@ -115,6 +214,7 @@ void display2(int N)
 }
 void display3()
 {
+
     int i, j, n=10;
     char name[50]="Times Up";
     int len;
@@ -184,7 +284,10 @@ void display3()
 
         printf("\n");
     }
-
+    Sleep(1000);
+    system("cls");
+ printf("\n Set Timer      : press(X)\n");
+ printf("\n Exit           : press(X)\n");
 
 }
 int ran_dom()
