@@ -298,17 +298,3 @@ int ran_dom()
         return num;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
